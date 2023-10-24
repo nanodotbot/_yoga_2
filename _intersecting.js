@@ -10,11 +10,19 @@ const iOptions = {
 const iObserver = new IntersectionObserver(entries => {
     entries.forEach((entry) => {
         if(!entry.isIntersecting){
+            console.log(entry.target);
+            let targetId = entry.target.getAttribute('id');
+            targetId = '#' + targetId;
             links.forEach(link => {
-                link.classList.remove('active');
+                const linkHref = link.getAttribute('href');
+
+                if(targetId === linkHref){
+                    link.classList.remove('active');
+                }
             })
         }
         if(entry.isIntersecting){
+            console.log(entry.target);
             let targetId = entry.target.getAttribute('id');
             targetId = '#' + targetId;
             
@@ -22,8 +30,8 @@ const iObserver = new IntersectionObserver(entries => {
                 const linkHref = link.getAttribute('href');
                 
                 if(targetId === linkHref){
-                    // console.log(targetId);
-                    // console.log(linkHref);
+                    console.log(targetId);
+                    console.log(linkHref);
                     link.classList.add('active');
                 }
             })
