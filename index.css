@@ -126,6 +126,11 @@ main header > #main-nav > a:hover {
 #data-protection {
   margin-bottom: var(--default-gap);
 }
+@media screen and (max-width: 500px) {
+  div.toggle {
+    grid-template-columns: min-content max-content;
+  }
+}
 footer {
   scroll-snap-align: var(--scroll-snap);
   min-height: 100vh;
