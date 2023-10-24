@@ -1,0 +1,124 @@
+body {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    
+    background-color: #f6e4e2;
+}
+
+#nav {
+    align-self: start;
+
+    width: 1200px;
+    max-width: 98vw - (100% - 98vw);
+    padding: 0 var(--default-gap);
+    margin: 0 auto;
+
+    // background-color: var(--background-transparent-light);
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    > a {
+        display: block;
+        font-size: calc(1rem + 2vw);
+        color: #d16a75;
+    
+        &.active {
+            color: #69212a;
+        }
+
+        &:hover {
+            color: #69212a;
+            background-color: transparent;
+        }
+    }
+}
+
+#main {
+    align-self: start;
+
+    height: 100%;
+    width: 700px;
+    max-width: 95vw - (100% - 95vw);
+    margin: 0 auto 0 auto;
+
+    display: grid;
+    align-content: center;
+
+    > h1 {
+        color: #69212a;
+
+        font-size: calc(4rem + 3vw);
+        line-height: 1;
+        text-align: center;
+
+        margin-bottom: calc(1.5 * var(--default-gap));
+    }
+    > p {
+        margin: var(--default-gap) auto;
+    
+        > a {
+            color: #d16a75;
+
+            &:hover {
+                color: #69212a;
+                // background-color: transparent;
+            }    
+        }
+    }
+}
+
+footer  {
+    align-self: end;
+    width: 100%;
+
+    padding: calc(2 * var(--default-gap)) 0;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: calc(var(--default-gap) / 2);
+
+    background-color: var(--footer);
+
+    > img {
+        width: calc(3 * var(--default-gap));
+        margin: 0 auto;
+    }
+
+    > a, button.link {
+        display: block;
+        width: max-content;
+        margin: 0 auto;
+
+        font-size: var(--font-size-small);
+        line-height: var(--line-height);
+        color: var(--link-footer);
+        background-color: var(--link-contrast-bg);
+
+        &:hover {
+            color: #f6e4e2;
+            background-color: transparent;
+        }
+    }
+
+    > hr {
+        width: 700px;
+        border-top: .1rem solid #f6e4e2;
+        max-width: 98vw - (100% - 98vw);
+        margin: var(--default-gap) 0;
+    }
+}
+
+.modal {
+    padding-bottom: var(--default-gap);
+
+    > #modal-credits-inner {
+        border: .1rem solid #d16a75;
+    }
+}

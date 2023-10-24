@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="icon" type="image/png" href="./imgs/favicon.ico">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./single-page.css">
+    <link rel="stylesheet" href="./contact.css">
+
+    <script src="./_textarea.js" defer></script>
+    <script src="./_modal.js" defer></script>
+    <script src="./credits-modal.js" defer></script>
+    <script src="./contact.js" defer></script>
+</head>
+
+<body>
+
+    <nav id="nav">
+        <a href="./index.html" class="link">Home</a>
+        <a href="./classes.html" class="link">Classes</a>
+        <a href="./about.html" class="link">About</a>
+        <a class="active" href="./contact.html" class="link">Contact</a>
+    </nav>
+    
+    <main id="main">
+        
+        <h1>Contact</h1>
+
+        <form novalidate>
+
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" autocomplete="on" autofocus>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" autocomplete="on">
+            </div>
+            <div>
+                <label for="tel">Phone number</label>
+                <input type="tel" name="tel" id="tel" autocomplete="on">
+            </div>
+            <div>
+                <label for="message">A short message to me</label>
+                <textarea id="message" class="textarea" name="message"></textarea>
+            </div>
+            <div id="data-protection" class="toggle">
+                <p>I have noticed the <button id="data-protection-button" class="link"><span>data protection disclaimer</span></button>.</p>
+                <input type="checkbox" class="toggle-input" id="toggle-data-protection-agreement">
+                <label for="toggle-data-protection-agreement" class="toggle-label" id="toggle-data-protection-agreement-label"></label>
+            </div>
+    
+            <button id="contact-button">Send</button>
+
+        </form>
+        
+        <p id="contact-feedback" class="feedback"></p>
+                    
+    </main>
+
+    <footer>
+
+        <img src="./imgs/logo.png" alt="the logo, a bright red, blurred circle">
+        <a href="./contact.html">Contact</a>
+        <a href="./dataprotection.html">Data protection</a>
+        <hr>
+        <button id="open-credits" class="link">Credits</button>
+
+    </footer>
+
+    <div id="modal-dataprotection" class="modal">
+
+        <div id="modal-dataprotection-inner" class="modal-inner">
+
+            <div class="modal-header">
+
+                <button class="modal-close link"><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z"/></svg></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h2>Data protection disclaimer</h2>
+                <p>Submitting the form will send me an email with all the information that you provided. I will get in touch with you as soon as possible.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="modal-credits" class="modal">
+
+        <div id="modal-credits-inner" class="modal-inner">
+
+            <div class="modal-header">
+
+                <button class="modal-close link"><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z"/></svg></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h2>Credits</h2>
+                <p>The homepage background picture is from <a href="https://www.freepik.com/free-vector/hand-painted-style-mandala-background_15073953.htm" target="_blank" rel="noopener noreferrer">Freepik</a>.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
