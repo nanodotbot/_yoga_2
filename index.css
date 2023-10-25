@@ -91,7 +91,7 @@ main > section {
   min-height: 100vh;
   width: 700px;
   max-width: 90vw;
-  padding: calc(4 * var(--default-gap)) 0 calc(4 * var(--default-gap)) 0;
+  padding: calc(6 * var(--default-gap)) 0 calc(6 * var(--default-gap)) 0;
   margin: 0 auto 0 auto;
   display: grid;
   align-content: center;
@@ -134,7 +134,7 @@ main header > #main-nav {
 }
 main header > #main-nav > a {
   display: block;
-  font-size: calc(1rem + 1.5vw);
+  font-size: calc(1rem + 2vw);
   color: #d16a75;
 }
 main header > #main-nav > a.active {
