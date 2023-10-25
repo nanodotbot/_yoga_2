@@ -39,7 +39,7 @@ html, main {
             font-size: 2rem;
         }
     }
-    #landing-nav {
+    > #landing-nav {
         position: sticky;
         top: 0;
         width: 1200px;
@@ -68,7 +68,33 @@ html, main {
                 background-color: transparent;
             }
         }
-    }    
+    }
+    #social-header {
+        position: absolute;
+        bottom: var(--default-gap);    
+    }
+}
+
+.social {
+    width: 100%;
+
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: min-content min-content;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--default-gap) / 2);
+
+    > a {
+        display: block;
+        width: 24px;
+        height: 24px;
+
+        &:hover > svg {
+            fill: #69212a;
+        }
+    }
 }
 
 main {
@@ -199,6 +225,21 @@ footer  {
         &:hover {
             color: #f6e4e2;
             background-color: transparent;
+        }
+    }
+
+    > #social-footer {
+        margin-bottom: var(--default-gap);
+        a {
+            svg {
+                fill: var(--link-footer);
+            }
+            &:hover {
+                background-color: transparent;
+                svg {
+                    fill: #f6e4e2;
+                }
+            }
         }
     }
 

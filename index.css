@@ -35,7 +35,7 @@ main {
 #landing > #header > p {
   font-size: 2rem;
 }
-#landing #landing-nav {
+#landing > #landing-nav {
   position: sticky;
   top: 0;
   width: 1200px;
@@ -47,17 +47,38 @@ main {
   align-items: center;
   justify-content: space-between;
 }
-#landing #landing-nav > a {
+#landing > #landing-nav > a {
   display: block;
   font-size: calc(1rem + 2vw);
   color: #d16a75;
 }
-#landing #landing-nav > a.active {
+#landing > #landing-nav > a.active {
   color: #69212a;
 }
-#landing #landing-nav > a:hover {
+#landing > #landing-nav > a:hover {
   color: #69212a;
   background-color: transparent;
+}
+#landing #social-header {
+  position: absolute;
+  bottom: var(--default-gap);
+}
+.social {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--default-gap) / 2);
+}
+.social > a {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.social > a:hover > svg {
+  fill: #69212a;
 }
 main {
   background-image: url('imgs/5559585-opacity-20.png');
@@ -161,6 +182,18 @@ footer > a:hover,
 footer button.link:hover {
   color: #f6e4e2;
   background-color: transparent;
+}
+footer > #social-footer {
+  margin-bottom: var(--default-gap);
+}
+footer > #social-footer a svg {
+  fill: var(--link-footer);
+}
+footer > #social-footer a:hover {
+  background-color: transparent;
+}
+footer > #social-footer a:hover svg {
+  fill: #f6e4e2;
 }
 footer > hr {
   width: 700px;

@@ -1,0 +1,12 @@
+.blur-intersecting {
+    --transition-duration: .5s;
+
+    opacity: 0;
+    filter: blur(5px);
+    transition: opacity var(--transition-duration), filter var(--transition-duration);
+
+    &.active {
+        opacity: 1;
+        filter: blur(0);    
+    }
+}

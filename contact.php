@@ -10,7 +10,7 @@ $message = htmlspecialchars($message);
 $message = preg_replace('/\v+|\\\r\\\n/Ui','<br>',$message);
 
 $mail_message = 'name: ' . $name . '- mail: ' . $mail . '- phone: ' . $phone . '- message: ' . wordwrap($message, 70);
-mail('info@nano.sx', 'yoga', $mail_message);
+mail('info@nano.sx, angi@angi.yoga', 'yoga', $mail_message);
 
 $data = '{
     "message": "Thanks for your message! I will get in touch with you as soon as possible."

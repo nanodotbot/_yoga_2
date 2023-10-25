@@ -10,7 +10,7 @@ const iOptions = {
 const iObserver = new IntersectionObserver(entries => {
     entries.forEach((entry) => {
         if(!entry.isIntersecting){
-            console.log(entry.target);
+            // console.log(entry.target);
             let targetId = entry.target.getAttribute('id');
             targetId = '#' + targetId;
             links.forEach(link => {
@@ -22,7 +22,7 @@ const iObserver = new IntersectionObserver(entries => {
             })
         }
         if(entry.isIntersecting){
-            console.log(entry.target);
+            // console.log(entry.target);
             let targetId = entry.target.getAttribute('id');
             targetId = '#' + targetId;
             
@@ -30,8 +30,8 @@ const iObserver = new IntersectionObserver(entries => {
                 const linkHref = link.getAttribute('href');
                 
                 if(targetId === linkHref){
-                    console.log(targetId);
-                    console.log(linkHref);
+                    // console.log(targetId);
+                    // console.log(linkHref);
                     link.classList.add('active');
                 }
             })
