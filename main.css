@@ -643,7 +643,7 @@ div.modal > div.modal-inner > div.modal-body > p {
 
 .feedback {
     font-size: var(--font-size-small);
-    min-height: calc(1.5 * var(--default-gap));
+    min-height: calc(3 * var(--default-gap));
 }
 .success {
     color: var(--success);
